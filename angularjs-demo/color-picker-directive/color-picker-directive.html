@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" ng-app="colorPickerApp">
+<head>
+  <meta charset="utf-8">
+  <title>Color Picker</title>
+  <script src="angular.js"></script>
+  <script src="color-picker-directive-controller.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+	<color-picker red="r" green="g" blue="b" alpha="a"></color-picker ><br />
+	FONT:<number-picker num="sz"></number-picker><br />
+	<span style="font-size:{{sz}}px;color:rgba({{r}},{{g}},{{b}},{{a}});">COLOR<br />
+</body>
+</html>

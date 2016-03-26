@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" ng-app="numberPickerApp">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Number Picker</title>
+  <script src="angular.js"></script>
+  <script src="number-picker-demo.js"></script>
+</head>
+<body ng-controller="MainCtrl">  
+   Size:<number-picker num="size" min="12" max="36"></number-picker><br /><br />
+   Pos:<number-picker num="left" min="10" max="500"></number-picker><br /><br />
+   <hr />
+   Sample Text:<br />
+   <span style="font-size:{{size}}px;position:absolute;left:{{left}}px;">{{size}}</span><br /><br /><br /><br />
+   <input type="button" ng-click="resetToDefault()" value="reset">
+   
+</body>
+</html>

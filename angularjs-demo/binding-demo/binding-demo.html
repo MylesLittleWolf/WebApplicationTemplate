@@ -1,0 +1,12 @@
+<html ng-app="bingingDemoApp">
+<head>
+  <script src="angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="BingingDemoCtrl">
+  <input type="range" ng-model="fsize">
+  <input type="text" ng-model="fsize">
+  <input type="button" value="+" ng-click="addFsize()" /><br />
+  <span style="font-size:{{fsize}}px;">{{fsize}}</span>  
+</body>
+</html>
