@@ -1,0 +1,85 @@
+(function () {
+// app.js
+define('app',[],
+	function() {
+		window.console = (window.console) || {};
+		window.console.log = (window.console.log) || function(){};			
+		var App = {
+			initialize : function() {
+				console.log("into initialize");
+			},
+		};
+		window.KoKoLaApp = App;
+//		domReady(function() {	
+//			App.initialize();
+//		});	
+		return App;
+});
+
+
+require.config({
+	paths : {
+		//'jquery' : '../../js/lib/jquery/jquery-1.7.2.min',
+		'less' : '../../js/lib/less/less-1.3.0.min'
+	},
+
+	shim: {
+/*		
+        'backbone': {
+            deps: ['underscore', 'jquery'],
+            exports: 'Backbone'
+        },
+        'jquerymigrate': {
+            deps: ['jquery']
+        },
+        'backbone': {
+            deps: ['jquery']
+        },
+        'jqueryui': {
+            deps: ['jquery']
+        },
+        'jqueryuitimepicker': {
+            deps: ['jqueryui']
+        },
+        'bootstrap': {
+            deps: ['jquery']
+        },
+        'jqueryi18n': {
+            deps: ['jquery']
+        },
+        'jqueryflot': {
+            deps: ['jquery']
+        },
+        'utils': {
+            deps: ['jquery','jqueryui','jqueryi18n']
+        },
+*/
+        'app': {
+            deps: [ 
+//                    'jquery',
+//                    'jquerymigrate',
+//                    'backbone',
+//                    'domReady',
+//                    'bootstrap',
+//                    'jqueryui',
+                    
+                    
+//                    'jqueryflot',
+//                    'jqueryi18n',
+//                    'dateformat',
+//                    'swfobject',
+//                    'kokosetting'
+                    
+                    ]
+        },
+    },
+
+	baseUrl: 'js',
+	waitSeconds: 600
+});
+
+require(['less','app'], function(){
+	console.log("into requirejs");
+});
+define("main", function(){});
+}());

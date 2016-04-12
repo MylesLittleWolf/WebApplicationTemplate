@@ -1,0 +1,2 @@
+(function(){define("app",[],function(){window.console=window.console||{},window.console.log=window.console.log||function(){};var n={initialize:function(){console.log("into initialize built")}};return window.KoKoLaApp=n,n}),require.config({paths:{less:"../../js/lib/less/less-1.3.0.min"},shim:{app:{deps:[]}},baseUrl:"js",waitSeconds:600}),require(["less","app"],function(){console.log("into requirejs built")}),define("main",function(){})})();
+//@ sourceMappingURL=app-built.js.map
